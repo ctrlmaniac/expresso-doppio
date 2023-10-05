@@ -1,10 +1,24 @@
 {
   "name": "root",
   "private": true,
+  "author": "Davide Di Criscito <davide.dicriscito@gmail.com>",
   "workspaces": [
     "clients/*",
     "applications/**/server"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ctrlmaniac/expresso-doppio.git"
+  },
+  "keywords": [
+    "expressjs",
+    "nodejs",
+    "vite",
+    "fullstack"
+  ],
+  "scripts": {
+    "build": "npx lerna exec --scope '*-client' npm run build"
+  },
   "devDependencies": {
     "lerna": "^7.3.0"
   }

@@ -1,0 +1,7 @@
+{
+  "name": "app2-server",
+  "version": "0.0.0",
+  "description": "App 2 Server",
+  "main": "index.js",
+  "license": "MIT"
+}

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+npm run build
+
+for app in $(find applications/ -mindepth 1 -maxdepth 1 -type d); do
+  if test -d "$app/static"; then
+    rm -rf "$app/static"
+  fi
+done 
+
+for client in $(find clients/ -mindepth 1 -maxdepth 1 -type d); do
+  mv "$client/dist" "applications/${client##*/}/static"
+done
